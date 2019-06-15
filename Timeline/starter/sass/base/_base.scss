@@ -1,0 +1,52 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+/* como o rem é baseado no font-size do root,
+ao definir como 10px fica com a conversão de 1rem - 10px;
+E dessa forma facilita o cálculo. */
+
+/*pos note: mas voce nao deve definir como px, porque é uma pratica ruim
+que limita o usuario e impede ele de mudar o tamanho da @font-face {
+então voce calcula a porcentagem
+e, se eu quero 10 px, e o padrao do navegador é 16px, eu faco 10/16 e converto */
+
+html {
+  //This defines what 1rem is
+    font-size: 62.5%; //1rem =10px; 10px/16px = 62.5;
+
+
+    @include respond(tab-land) { //width < 1200?
+      font-size: 56.25%; //1 rem = 9px; 9/16 = 56.25%;
+    }
+
+    @include respond(tab-port) { //width < 900?
+      font-size: 50%; //1 rem = 8px, 8/16 = 50%
+    }
+
+    @include respond(big-desktop) {
+      font-size: 75%; //1rem = 12, 12/16 = 75%
+    }
+}
+
+body {
+  box-sizing: border-box;
+  padding: 3rem;
+
+  @include respond(tab-port) {
+    padding: 0;
+  }
+}
+
+ul {
+  list-style: none;
+}
+
+::selection {
+  background-color: $color-primary;
+  color: $color-white;
+}

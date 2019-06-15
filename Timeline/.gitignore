@@ -1,0 +1,13 @@
+.sass-cache/
+.DS_Store
+node_modules/
+*.sublime-project
+build/
+arquivos/
+bower_components/
+src/wordpress/wp-content/themes/BF.*
+src/wordpress/wp-config.php
+npm-debug\.log
+
+\.vtexid
+.idea*.md

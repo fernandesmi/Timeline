@@ -1,0 +1,100 @@
+.vis-group {
+    background-image: linear-gradient(to right bottom, rgba(126,213,111,0.8), rgba(40,180,133,0.8)),url(../img/marvel-comics-background.jpg);
+
+
+  .card {
+    background-color: rgba(255,255,255,0.8);
+    border: {
+      radius: 4px;
+      width: 0;
+    }
+    color: $color-grey-dark;
+
+    > .vis-item-content {
+      padding: 0;
+    }
+    &-header {
+      &__image {
+        height: 100px;
+        overflow: hidden;
+
+        img {
+          object-fit: cover;
+          filter: brightness(.5);
+          width: 150px;
+        }
+      }
+
+      &__title {
+        margin-top: .5rem;
+      }
+    }
+
+    &-content {
+      padding: 0 1rem 1rem;
+
+    }
+
+    &.vis-selected {
+      background-color: rgba(255,255,255,0.8);
+      border: {
+        width: 1px;
+      }
+    }
+
+    &:hover {
+      box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+      transform: translate3D(0, -2px, 0) scale(1.03);
+
+      img {
+        tranform: translateX(-4rem) scale(1);
+        filter: brightness(.9);
+      }
+      z-index: 1;
+    }
+
+    &::before {
+      content: '';
+      display: block;
+      height: 5px;
+      width: 100%;
+      z-index: 1;
+    }
+
+    &.iron-man
+    {
+      border-color: $color-iron;
+      &::before {
+        background-color: $color-iron;
+      }
+    }
+
+    &.hulk {
+      border-color: $color-hulk;
+      &::before {
+        background-color: $color-hulk;
+      }
+    }
+
+    &.captain {
+      border-color: $color-captain;
+      &::before {
+        background-color: $color-captain;
+      }
+    }
+
+    &.thor {
+      border-color: $color-thor;
+      &::before {
+        background-color: $color-thor;
+      }
+    }
+
+    &.avengers {
+      border-color: $color-iron;
+      &::before {
+        background-image: linear-gradient(to right, $color-iron, #28b485);
+      }
+    }
+}
+}
