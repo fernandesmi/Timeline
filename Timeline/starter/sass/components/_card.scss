@@ -1,5 +1,5 @@
 .vis-group {
-    background-image: linear-gradient(to right bottom, rgba(126,213,111,0.8), rgba(40,180,133,0.8)),url(../img/marvel-comics-background.jpg);
+    background-image: linear-gradient(to right bottom, #333, rgba(0,0,0,0.5)),url(../img/background.jpg);
 
 
   .card {
@@ -44,7 +44,9 @@
 
     &:hover {
       box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+      cursor: pointer;
       transform: translate3D(0, -2px, 0) scale(1.03);
+
 
       img {
         tranform: translateX(-4rem) scale(1);
