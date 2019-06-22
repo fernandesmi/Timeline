@@ -1,0 +1,29 @@
+{
+  "posts": [
+    {"id": 1,
+    "content": "<div class='card-header__image'><img src='https://vignette.wikia.nocookie.net/marveldatabase/images/2/20/Ironmanposter.jpg' height='auto' width='50px'/></div><h2 class='card-header__title'>Iron Man</h2><div class='card-content'><div class='card-content__director'>Jon Favreau</div><div>Release Date: May 2, 2008<div></div>",
+     "start": "2008-05-02",
+     "title": "US$ 585.1 million",
+     "group": "A",
+     "className": "card iron-man"
+   },
+   {"id": 2,
+   "content": "<div class='card-header__image'><img src='https://vignette.wikia.nocookie.net/marveldatabase/images/2/20/Ironmanposter.jpg' height='auto' width='50px'/></div><h2 class='card-header__title'>Iron Man</h2><div class='card-content'><div class='card-content__director'>Jon Favreau</div><div>Release Date: May 2, 2008<div></div>",
+    "start": "2008-05-02",
+    "title": "US$ 585.1 million",
+    "group": "A",
+    "className": "card iron-man"
+  },
+   {"id": 3,
+   "content": "<div class='card-header__image'><img src='https://vignette.wikia.nocookie.net/marveldatabase/images/2/20/Ironmanposter.jpg' height='auto' width='50px'/></div><h2 class='card-header__title'>Iron Man</h2><div class='card-content'><div class='card-content__director'>Jon Favreau</div><div>Release Date: May 2, 2008<div></div>",
+    "start": "2008-05-03",
+    "title": "US$ 585.1 million",
+    "group": "B",
+    "className": "card iron-man"
+  }
+  ],
+  "comments": [
+    { "id": 1, "body": "some comment", "postId": 1 }
+  ],
+  "profile": { "name": "typicode" }
+}
