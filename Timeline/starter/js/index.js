@@ -2,21 +2,34 @@ $(document).ready(function () {
   // DOM element where the Timeline will be attached
 
   $.ajax({
-      url: 'http://localhost:3000/posts',
+      url: 'http://localhost:3000/comments',
       success: function (data) {
         // hide the "loading..." message
 
         console.log(data);
 
-      var container = document.getElementById('visualization');
+      var container = document.getElementById('visualization2');
 
       if(container) {
+
+        var itemsArray = [];
+
+        data.map(function(aux) {
+          itemsArray.push(
+            {id: aux.id,
+             content: "<div class='card-header'>" + aux.body + "</div>",
+             start: aux.start}
+           );
+          console.log(itemsArray, "banana");
+        })
+
+
 
         var items = new vis.DataSet([
             {id: 1,
              content: '<div class="card-header__image"><img src="https://vignette.wikia.nocookie.net/marveldatabase/images/2/20/Ironmanposter.jpg" height="auto" width="50px"/></div><h2 class="card-header__title">Iron Man</h2><div class="card-content"><div class="card-content__director">Jon Favreau</div><div>Release Date: May 2, 2008<div></div>',
              start: '2008-05-02',
-             title: 'US$ 585.1 million',
+             title: 'US$ 5  85.1 million',
              className: 'card iron-man'
            },
            {id: 2,
@@ -72,8 +85,9 @@ $(document).ready(function () {
         // Create a Timeline
         var timeline = new vis.Timeline(container);
         timeline.setOptions(options);
-        timeline.setGroups(groups);
-        timeline.setItems(data);
+        //timeline.setGroups(groups);
+      //  timeline.setItems(itemsArray);
+        timeline.setItems(items);
 
       }
     }, error: function (err) {

@@ -23,7 +23,8 @@
   }
   ],
   "comments": [
-    { "id": 1, "body": "some comment", "postId": 1 }
+    { "id": 1, "body": "890490", "title": "iron", "start": "2008-05-02" },
+    { "id": 2, "body": "890490", "title": "iron", "start": "2008-05-03" }
   ],
   "profile": { "name": "typicode" }
 }
